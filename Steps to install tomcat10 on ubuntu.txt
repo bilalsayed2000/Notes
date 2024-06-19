@@ -1,0 +1,18 @@
+First go to the folder where .pem file is located and open powershell terminal and connect to ec2 instance using ssh .
+Then connect to superuser using "sudo su".
+Then update apt package using "apt update".
+Then install any java-jdk version using "apt install openjdk-17-jdk".
+Then confirm installation of java using "java -version".
+Check which version of Tomcat is present in apt using "apt-cache search tomcat".
+Then install that version using "apt install tomcat10".
+Then check the status of tomcat using "systemctl status tomcat10".
+If it's active and running then add port 8080 in inbound Security group and using public ip address connect to it placing infront ":8080" of url.
+To change the port, 
+First stop Tomcat running using "systemctl stop tomcat10".
+Then go to tomcat installation directory and locate conf folder in that open server.xml file there change poert of your desired :- "sudo vim /var/lib/tomcat10/conf/server.xml".
+
+	<Connector port="8080" protocol="HTTP/1.1"
+           connectionTimeout="20000"
+           redirectPort="8443" />
+To edit in vim press "i" and to exit ":wq"
+Start again tomcat using "systemctl start tomcat10" and check status
