@@ -1,0 +1,10 @@
+Commands and steps to start React project
+1)Open cmd and run npm create vite command
+     To install specific version :- "npm create vite@version"
+     To install latest version :- "npm create vite@latest"
+2)Then Close and open VS code their open the project folder created and open terminal
+3)In Terminal first run "npm install" to install npm package, then run "npm run dev"  to start the server
+
+To install Bootstrap
+1)Run "npm i bootstrap@5.3.3"   (You can check latest version in bootstrap official website)
+2) Import it into main.jsx file:- import 'bootstrap/dist/css/bootstrap.min.css'
